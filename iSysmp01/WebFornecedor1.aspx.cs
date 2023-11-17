@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
-using Correios.Net;
+//using Correios.Net;
 
 namespace iSysmp01
 {
@@ -1066,12 +1066,12 @@ namespace iSysmp01
             {
 
                 // Busca o CEP nos Correios pela API
-                Address address = BuscaCep.GetAddress(this.txtCep.Value);
-                this.txtEnd.Value = address.Street;
-                this.txtBairro.Text = address.District;
-                this.txtCidade.Value = address.City;
-                this.txtUf.Text = address.State;
-                this.lblmensagem1.Text = "";
+                //Address address = BuscaCep.GetAddress(this.txtCep.Value);
+                //this.txtEnd.Value = address.Street;
+                //this.txtBairro.Text = address.District;
+                //this.txtCidade.Value = address.City;
+                //this.txtUf.Text = address.State;
+                //this.lblmensagem1.Text = "";
             }
             catch
             {

@@ -1,0 +1,240 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="iSysmp01.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>.:Sistema Sysmp:.</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+        
+                <style type="text/css">
+                .style1
+                {
+                    height: 80px;
+                }
+                .style2
+                {
+                    height: 28px;
+                }
+                .style3
+                {
+                    height: 198px;
+                }
+                .table1
+                {
+                    width: 960px;
+    
+                    margin: 20px auto 0px auto;
+                    border: 1px solid #000000;
+                }
+
+                .table2
+                {
+                    padding: 4px 0px 4px 8px;
+                }
+
+                a {
+	                text-decoration:none;
+                }
+
+                a:hover
+                {
+                    border-bottom: none;
+                }
+
+                .menu:hover {
+
+	                background-color:#666666;
+                }
+	        #ad{
+		        padding-top:220px;
+		        padding-left:10px;
+	        }
+	            .auto-style1 {
+                    color: #CCCCCC;
+                }
+
+            </style>
+
+
+    </asp:ContentPlaceHolder>
+            <script type="text/javascript" src="jquery/jquery-1.8.2.js"></script>
+            <script type="text/javascript" src="util/funcoesjs.js"></script>
+
+
+            <script type="text/javascript">
+
+                $(document).ready(function () {
+                    $('input:text:first').focus();
+                    $('input:text').bind("keydown", function (e) {
+                        if (e.which == 13) { //tecla enter keycode =13
+                            e.preventDefault(); //nao executa evento padrao 
+                            var nextIndex = $('input:text').index(this) + 1;
+                            $('input:text')[nextIndex].focus();
+                        }
+                    });
+                    $('#btnReset').click(
+                 function () {
+                     $('form')[0].reset();
+                 });
+                });
+
+
+                function keyCatcher() {
+                    var e = event.srcElement.tagName;
+
+                    if (event.keyCode == 8 && e != "INPUT" && e != "TEXTAREA") {
+                        event.cancelBubble = true;
+                        event.returnValue = false;
+                    }
+
+                    if (event.keyCode == 27) {
+                        window.location = "WebSistem1.aspx";
+                    }
+
+                }
+
+            </script>
+
+            <script>
+                function janela_help_sys(URL) {
+                    window.open(URL, "janela2", "width=410,height=535,resizable=NO,status=NO,Scrollbars=YES,location=NO,menubar=NO,toolbar=NO,minimize=NO,close=NO");
+                } 
+        </script>
+ 
+
+</head>
+<body  bgcolor="#b6b7bc" onkeydown="javascript:if (event.KeyCode==13) event.KeyCode=9; javascript:document.onkeydown = keyCatcher();">
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+        <!-- Aqui -->
+
+<table width="100%"  style="height:390" border="0" cellpadding="0" cellspacing="0">
+ 
+  <tr>
+    <td valign="top"><div align="center">
+      <table width="995" style="height:609" border="0" cellpadding="1" cellspacing="0" bgcolor="#000000" class="table1">
+        <tr class="table1">
+          <td height="114" bgcolor="#4B6C9E">
+
+
+<table width="100%" style="height:113" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="20%" height="113" bgcolor="#4B6C9E"><table width="99%" style="height:113" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="84" bgcolor="#4B6C9E"><table width="141" style="height:71" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="41">&nbsp;</td>
+                      <td width="110" align="center"><img src="imagens/novo_logo_x_seg.png" width="86" 
+                              height="73"></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td height="29" bgcolor="#4B6C9E"> <table width="145" border="0" align="left" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="145" height="20" bgcolor="#4B6C9E"><div align="center"><font color="#CCCCCC" size="1" face="Arial">
+
+
+                       
+                      <iframe src="User.aspx" width="130" height="24" scrolling="no" frameborder="0" align="left"></iframe>
+
+                        
+
+
+                          </font>
+                          </div></td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#4B6C9E"><div align="center"><img src="imagens/kitt.gif" width="80" 
+                              height="4"></div></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              </table></td>
+              <td width="75%" bgcolor="#4B6C9E"><table width="100%" height="101" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="23"><div align="center"><b><font color="#CCCCCC" face="Arial">SSindicato dos Empregados de Edifícios de São Paulo </font></b> </div></td>
+                </tr>
+                <tr>
+ 
+                  <td><div align="center"><b><i><font color="#CCCCCC" size="2" face="Arial"> 
+                      <asp:Label ID="lblsauda3" runat="server" ></asp:Label>
+                      </font> </i></b></div></td>
+                </tr>
+                <tr>
+                  <td height="38" align="right" valign="bottom"><span style="color: #CCCCCC">Conectado em:</span>
+                      <asp:Label ID="lbllocal1" runat="server" style="color: #FFFFFF"></asp:Label>
+                      &nbsp;</td>
+                </tr>
+              </table></td>
+              <td width="5%" bgcolor="#4B6C9E" valign="bottom">
+              <a href="javascript:janela_help_sys('Ajuda1.aspx')">
+              
+                  <asp:Image ID="Image1" runat="server" ImageUrl="~/imagens/qmark.gif" 
+                       Height="35px" Width="37px" ToolTip="Clique Aqui para Obter Ajuda." 
+                      BorderStyle="None" />
+                      </a>
+                </td>
+            </tr>
+          </table>
+         </td>
+        </tr>
+        <tr>
+          <td height="45" bgcolor="#3A4F63">            <table border="0" cellpadding="0" cellspacing="0" bgcolor="#666666">
+            <tr>
+              <td width="10" bgcolor="#3A4F63">&nbsp;</td>
+              <td width="800"><table width="810" height="26" border="0" cellpadding="0" cellspacing="1">
+                <tr class="table2">
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="WebLogar1.aspx?login=sair"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Sair</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="WebSistem1.aspx"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Cadastro</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="#"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Contribuição</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="WebSistem3.aspx"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Relatórios</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="#"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Sáude</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="#"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Jurídico</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="#"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Caixa</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="#"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Web</font></div></a></td>
+                  <td width="90" bgcolor="#465C71" class="menu"><a href="WebSistem8.aspx"><div align="center"><font color="#CCCCCC" size="2" face="Arial">Operador</font></div></a></td>
+                </tr>
+              </table></td>
+              <td width="35" bgcolor="#3A4F63">&nbsp;</td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+
+
+          <td height="414" valign="top" bgcolor="#FFFFFF"><div align="center">
+       <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+
+
+
+        </div>
+         
+          
+        
+            
+</div></td>
+        </tr>
+        <tr>
+          <td bgcolor="#4B6C9E"><div align="center"><font color="#CCCCCC" size="2" face="Arial">&copy;Created by Sindificios todos os direitos reservados 2013</font></div></td>
+        </tr>
+      </table>
+    </div></td>
+  </tr>
+</table>
+
+        <!-- Fim -->
+        </div>
+
+         <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
