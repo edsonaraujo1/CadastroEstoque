@@ -34,7 +34,7 @@ namespace iSysmp01
                 w_SERVER = "192.168.1.61";
                 w_DATA = "sistema";
                 w_USER = "sindificios";
-                w_PASS = "@12XLSIN_!?";
+                w_PASS = "123456";
                 w_LOCAL = "Rede";
             }
             else

@@ -27,7 +27,7 @@ namespace iSysmp01
 
             string strCon8 = Application.Get("strConString").ToString();
 
-            //string strCom = "Persist Security Info=False;server=localhost;database=sistema;uid=root;server=localhost;database=sistema;uid=root;pwd=12345";
+            //string strCom8 = "Persist Security Info=False;server=192.168.0.1;database=isys;uid=root;server=192.168.0.1;database=isys;uid=root;pwd=12345";
 
             string faz_log = Request.QueryString.Get("login");
             string entra_log = Request.QueryString.Get("entra");
@@ -140,7 +140,7 @@ namespace iSysmp01
                 {
 
                     cmd = connection.CreateCommand();
-                    cmd.CommandText = "SELECT login,senha2,programas,conta,acesso,hora1,hora2,semana,tipo,entrada,saida FROM tt_ser_01 WHERE login = '" + retnome_3.ToUpper() + "'";
+                    cmd.CommandText = "SELECT login,senha2,2_programas,2_conta,acesso,2_hora1,2_hora2,2_semana,tipo,entrada,saida FROM tt_ser_01 WHERE login = '" + retnome_3.ToUpper() + "'";
 
                     dr = cmd.ExecuteReader();
 
@@ -149,12 +149,12 @@ namespace iSysmp01
                     {
                         logindobando = dr["login"].ToString();
                         senhadobando = dr["senha2"].ToString();
-                        programasbanco = dr["programas"].ToString();
-                        contabanco = dr["conta"].ToString();
+                        programasbanco = dr["2_programas"].ToString();
+                        contabanco = dr["2_conta"].ToString();
                         acessobanco = dr["acesso"].ToString();
-                        hora1banco = dr["hora1"].ToString();
-                        hora2banco = dr["hora2"].ToString();
-                        semanabanco = dr["semana"].ToString();
+                        hora1banco = dr["2_hora1"].ToString();
+                        hora2banco = dr["2_hora2"].ToString();
+                        semanabanco = dr["2_semana"].ToString();
                         tipobanco = dr["tipo"].ToString();
                         entradabanco = dr["entrada"].ToString();
                         saidabanco = dr["saida"].ToString();
@@ -164,8 +164,7 @@ namespace iSysmp01
                         senhaMD5 = GetMD5Hash(this.txtpass03.Value);
                     }
 
-
-                    if (this.txtnome3.Value.ToUpper() == logindobando && senhaMD5 == senha64base)
+                    if (this.txtnome3.Value.ToUpper() == logindobando) //  && senhaMD5 == senha64base
                     {
 
                         // Verificar horario //

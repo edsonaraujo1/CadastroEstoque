@@ -66,3 +66,4 @@ C:\Desenv\Repositorio\CadastroEstoque\iSysmp01\bin\zh-Hant\System.Spatial.resour
 C:\Desenv\Repositorio\CadastroEstoque\iSysmp01\obj\Debug\iSysmp01.csproj.CopyComplete
 C:\Desenv\Repositorio\CadastroEstoque\iSysmp01\obj\Debug\iSysmp01.dll
 C:\Desenv\Repositorio\CadastroEstoque\iSysmp01\obj\Debug\iSysmp01.pdb
+C:\Desenv\Repositorio\CadastroEstoque\iSysmp01\obj\Debug\iSysmp01.csproj.AssemblyReference.cache

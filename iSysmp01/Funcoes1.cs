@@ -31,7 +31,7 @@ namespace iSysmp01
                     if (dr5.Read())
                     {
                         int i = 0;
-                        string progr_1 = dr5["programas"].ToString();
+                        string progr_1 = dr5["2_programas"].ToString();
                         string busca = progr_1;
                         string[] camp_bus = busca.Split(',');
                         string busca_nova = String.Join(";", camp_bus);
@@ -95,7 +95,7 @@ namespace iSysmp01
                     if (dr6.Read())
                     {
                         int i = 0;
-                        string progr_1 = dr6["semana"].ToString();
+                        string progr_1 = dr6["2_semana"].ToString();
                         string busca = progr_1;
                         string[] camp_bus = busca.Split(',');
                         string busca_nova = String.Join(";", camp_bus);

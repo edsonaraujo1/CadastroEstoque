@@ -404,6 +404,7 @@
     <Folder Include="fotosUser\" />
     <Folder Include="fotos\" />
     <Folder Include="image\GIF\" />
+    <Folder Include="webcam\photo\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />

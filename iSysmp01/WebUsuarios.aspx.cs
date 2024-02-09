@@ -237,7 +237,7 @@ namespace iSysmp01
 
             if (this.txtlogin.Text != "")
             {
-                query = "SELECT * FROM tt_ser_01 WHERE login = '" + this.txtlogin.Text + "'";
+                query = "SELECT * FROM tt_ser_01 WHERE id = '" + this.txtlogin.Text + "'";
             }
 
             using (MySqlConnection con = new MySqlConnection(strConx()))
@@ -262,16 +262,16 @@ namespace iSysmp01
                         this.txtlogin.Text = dr["login"].ToString();
                         this.txtsenha.Text = dr["senha2"].ToString();
                         this.txtData.Text = dr["data"].ToString();
-                        this.txtNome.Value = dr["nome_l"].ToString();
+                        this.txtNome.Value = dr["1_nome_l"].ToString();
                         this.txtMaquina.Value = dr["maquina"].ToString();
                         this.txtConta.ClearSelection();
-                        this.txtConta.Items.Insert(0, dr["conta"].ToString());
-                        this.txtPrograma.Value = dr["programas"].ToString();
-                        this.txtHora1.Value = dr["hora1"].ToString();
-                        this.txtHora2.Value = dr["hora2"].ToString();
+                        this.txtConta.Items.Insert(0, dr["2_conta"].ToString());
+                        this.txtPrograma.Value = dr["2_programas"].ToString();
+                        this.txtHora1.Value = dr["2_hora1"].ToString();
+                        this.txtHora2.Value = dr["2_hora2"].ToString();
                         this.txtTipo.ClearSelection();
                         this.txtTipo.Items.Insert(0, dr["tipo"].ToString());
-                        this.txtSemana.Value = dr["semana"].ToString();
+                        this.txtSemana.Value = dr["2_semana"].ToString();
                         this.txtEmail.Value = dr["e_mail"].ToString();
                         this.txtfoto1.ImageUrl = dr["foto"].ToString();
 
